@@ -1,6 +1,4 @@
-
-
-````markdown
+````
 # 🧠 Customer Analytics Project
 
 ## 📊 Introduction
