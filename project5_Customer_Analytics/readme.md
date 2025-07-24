@@ -1,7 +1,4 @@
-
 ---
-
-````markdown
 # 🧠 Customer Analytics Project
 
 ## 📊 Introduction
@@ -106,7 +103,7 @@ pip install -r filtered-requirements.txt
 ```
 
 📸 **GitHub Actions - Failed Run Example:**
-![GitHub Action Failed](https://github.com/Aparna10010/Customer_Analytics_Project/blob/main/Screenshot%202025-07-24%20221625.png)
+![GitHub Action Failed](https://github.com/Aparna10010/Machine-Learning/blob/main/project5_Customer_Analytics/GithubActionFailure.png)
 
 ✅ Will update on fix & successful deployment.
 
