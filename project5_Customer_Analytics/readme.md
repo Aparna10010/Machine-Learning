@@ -131,10 +131,10 @@ Build a production-ready pipeline for customer analytics that:
 ## 📷 Screenshots
 
 - MLflow Experiments (metrics, models, parameters)
-  ![ML Flow UI/Run Page](https://github.com/Aparna10010/Machine-Learning/blob/main/project5_Customer_Analytics/ML-Flow.png)
-  ![Ml Flow Model Showcase](https://github.com/Aparna10010/Customer_Analytics_Project/blob/main/ML-Flow2.png)
-  ![Ml Flow Metrics demo](https://github.com/Aparna10010/Customer_Analytics_Project/blob/main/ML-Flow1.png)
-  ![Ml Flow Gradio App Artifact](https://github.com/Aparna10010/Customer_Analytics_Project/blob/main/ML-Flow5.png)
+  ![ML Flow UI/Run Page](https://github.com/Aparna10010/Machine-Learning/blob/main/project5_Customer_Analytics/Run%20page.png)
+  ![Ml Flow Model Registerd](https://github.com/Aparna10010/Machine-Learning/blob/main/project5_Customer_Analytics/Model%20Registry.png)
+  ![Ml Flow Metrics demo](https://github.com/Aparna10010/Machine-Learning/blob/main/project5_Customer_Analytics/ML-Flow1.png)
+  ![Ml Flow Gradio App Artifact](https://github.com/Aparna10010/Machine-Learning/blob/main/project5_Customer_Analytics/ML-Flow5.png)
 
 
 
@@ -188,8 +188,6 @@ docker run -p 7860:7860 customer-analytics-app
 
 **Aparna Sharma**  
 *Data Science Enthusiast*  
-[GitHub](https://github.com/Aparna10010) <br>
-[LinkedIn](https://www.linkedin.com/in/apsh?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app) <br>
-[Email](aparnasharma10010@gmail.com)
+[GitHub](https://github.com/Aparna10010) | [LinkedIn](https://www.linkedin.com/in/apsh?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app) | [Email](aparnasharma10010@gmail.com)
 
 
