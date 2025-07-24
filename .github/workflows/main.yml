@@ -22,8 +22,10 @@ jobs:
     - name: Upgrade pip
       run: python -m pip install --upgrade pip
 
-    - name: Install dependencies
-      run: pip install -r project5_Customer_Analytics/requirements.txt
+    - name: Install dependencies (excluding cudf)
+      run: |
+        grep -v cudf project5_Customer_Analytics/requirements.txt > filtered-requirements.txt
+        pip install -r filtered-requirements.txt
 
     - name: Run app
       run: python project5_Customer_Analytics/app.py
