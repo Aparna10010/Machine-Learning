@@ -1,4 +1,7 @@
+
 ---
+
+````markdown
 # 🧠 Customer Analytics Project
 
 ## 📊 Introduction
@@ -31,117 +34,81 @@ Build a production-ready pipeline for customer analytics that:
 ## 🚀 Project Pipeline
 
 ### 1. **Data Preparation**
-- Loaded dataset
-- Data cleaning & feature engineering
-- Exploratory Data Analysis (EDA)
-- Feature scaling and label encoding
-- Data visualization for pattern discovery
-- Class Imbalance Handling with SMOTE
+- Data cleaning, feature engineering, and EDA
+- Visualized class imbalance
+- Applied SMOTE for oversampling
 
-### 📊 Class Imbalance Visualization
 ![Churn Distribution](https://github.com/Aparna10010/Customer_Analytics_Project/blob/main/Screenshot%202025-07-19%20185325.png)
 
-> Churn: `1 = Yes`, `0 = No` — imbalance addressed using **SMOTE**
+---
+
+### 2. **Model Training**
+- Trained: Logistic Regression, Decision Tree, Random Forest, XGBoost
+- Also built a **Feed-Forward Neural Network (FFNN)** using Keras
+- Compared model performance before and after SMOTE
 
 ---
 
-### 2. **Baseline Model Training**
-- Logistic Regression
-- XGBoost
-- Evaluated using Confusion Matrix & AUC-ROC
+### 3. **Customer Segmentation**
+- Applied **K-Means** and **DBSCAN**
+- Used Elbow & Silhouette methods for tuning
 
-### 3. **Handling Imbalance with SMOTE**
-- Applied SMOTE
-- Re-trained Logistic Regression, Decision Tree, Random Forest, XGBoost
-- Compared model performance before/after balancing
+---
 
-### 4. **Neural Network Modeling**
-- Feed-Forward Neural Network (FFNN) using Keras
-- Trained on balanced dataset
+### 4. **Model Tracking with MLflow**
+- Logged experiments, metrics, and model artifacts
+- Used MLflow Model Registry
 
-### 5. **Customer Segmentation**
-- K-Means (Elbow Method & Silhouette Score)
-- DBSCAN
-- Optimal clusters comparison
+📸 MLflow Screenshots:
+![Run Page](https://github.com/Aparna10010/Machine-Learning/blob/main/project5_Customer_Analytics/Run%20page.png)
+![Model Registry](https://github.com/Aparna10010/Machine-Learning/blob/main/project5_Customer_Analytics/Model%20Registry.png)
+![Metrics Demo](https://github.com/Aparna10010/Machine-Learning/blob/main/project5_Customer_Analytics/ML-Flow1.png)
 
-### 6. **Model Logging with MLflow**
-- Logged all models and hyperparameters
-- Compared models using MLflow UI
+---
 
-### 7. **Hyperparameter Tuning**
-- GridSearchCV (Sklearn models)
-- KerasTuner (FFNN)
-- Best model registered in MLflow
-
-### 8. **Gradio Web App**
-- Built an interactive UI using Gradio
-- Integrated model predictions
-- Logged app artifact in MLflow
+### 5. **Web App with Gradio**
+- Created a lightweight UI with Gradio for predictions
 
 ▶ [Launch Gradio App Live](https://c07f471745468683be.gradio.live/)  
-📸 [Gradio UI](https://github.com/Aparna10010/Machine-Learning/blob/main/project5_Customer_Analytics/Gradio%20UI.png)
-
-### 9. **Docker Containerization**
-- Dockerized the entire app
-- `Dockerfile` included
-- Currently debugging container execution issue
+📸 [Gradio Screenshot](https://github.com/Aparna10010/Machine-Learning/blob/main/project5_Customer_Analytics/Gradio%20UI.png)
 
 ---
 
-### 10. **CI/CD Integration (GitHub Actions)**
+### 6. **Docker Containerization**
+- Built and tested Docker container locally
+- Dockerfile provided
 
-Integrated GitHub Actions to automate testing and container build on code push. Status:
-
-| CI/CD Feature        | Status         |
-|----------------------|----------------|
-| Workflow Setup       | ✔️ Completed   |
-| Python Setup         | ❌ Failed initially (wrong version `3.1`) |
-| Dependency install   | ✔️ Successful  |
-| Docker build         | ❌ Under debugging |
-| CI pipeline          | 🚧 In progress |
-
-> GitHub Actions config created and tested multiple times. Workflow reaches Docker build step, but fails due to local path issues and unavailable `.tar.gz` packages. Debugging continues.
-
-#### 📂 Workflow YAML File (`.github/workflows/main.yml`)
-
-```yaml
-name: CI/CD Workflow
-
-on: [push, pull_request]
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
-
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.10'
-
-    - name: Install dependencies
-      run: |
-        pip install --upgrade pip
-        pip install -r requirements.txt
-
-    - name: Run tests
-      run: echo "Tests placeholder"
-
-    - name: Build Docker image
-      run: docker build -t customer-analytics-app .
+```bash
+docker build -t customer-analytics-app .
+docker run -p 7860:7860 customer-analytics-app
 ````
 
-#### ❌ Failed Workflow Runs
+---
 
-| Attempt | Issue                                       | Screenshot                                                     |
-| ------- | ------------------------------------------- | -------------------------------------------------------------- |
-| 1       | Python version '3.1' not found              | ![Python version error](.screenshots/python_version_error.png) |
-| 2-11    | Docker build failed (missing files / paths) | ![Docker fail](.screenshots/docker_build_error.png)            |
+### 7. **CI/CD with GitHub Actions**
 
-> Screenshots stored under `.screenshots/` for documentation purposes.
+* Configured GitHub Actions to run on every push
+* Steps include:
+
+  * Checkout
+  * Python setup
+  * Dependency installation
+  * App execution
+
+✅ Workflow YAML: `.github/workflows/main.yml`
+
+⚠️ **Current Issue**: Some packages like `cudf`, `colabtools`, and certain `.tar.gz` or platform-specific wheels fail in GitHub-hosted runners.
+✅ Filtered installation now works using:
+
+```bash
+grep -Ev "cudf|colabtools|\\.tar\\.gz" requirements.txt > filtered-requirements.txt
+pip install -r filtered-requirements.txt
+```
+
+📸 **GitHub Actions - Failed Run Example:**
+![GitHub Action Failed](https://github.com/Aparna10010/Customer_Analytics_Project/blob/main/Screenshot%202025-07-24%20221625.png)
+
+✅ Will update on fix & successful deployment.
 
 ---
 
@@ -159,60 +126,34 @@ jobs:
 
 ---
 
-## 📸 Screenshots
+## 📂 How to Run the Project
 
-* MLflow Run Page
-  ![ML Flow Run](https://github.com/Aparna10010/Machine-Learning/blob/main/project5_Customer_Analytics/Run%20page.png)
-* MLflow Registry
-  ![Model Register](https://github.com/Aparna10010/Machine-Learning/blob/main/project5_Customer_Analytics/Model%20Registry.png)
-* MLflow Metrics
-  ![Metrics](https://github.com/Aparna10010/Machine-Learning/blob/main/project5_Customer_Analytics/ML-Flow1.png)
-* MLflow App Artifact
-  ![App Artifact](https://github.com/Aparna10010/Machine-Learning/blob/main/project5_Customer_Analytics/ML-Flow5.png)
+```bash
+# Clone the repo
+git clone https://github.com/Aparna10010/Customer_Analytics_Project.git
+cd Customer_Analytics_Project
 
----
+# Create & activate virtual environment
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+venv\Scripts\activate     # Windows
 
-## ⚠️ Known Issues
+# Install dependencies (filtered)
+grep -Ev "cudf|colabtools|\\.tar\\.gz" requirements.txt > filtered-requirements.txt
+pip install -r filtered-requirements.txt
 
-* Dockerfile execution fails inside GitHub Actions (local context, missing `.tar.gz`)
-* CI/CD workflow only partially executes
-* Azure deployment not attempted due to verification limits
+# Run the Gradio app
+python app.py
+```
 
 ---
 
 ## ✅ Future Enhancements
 
-* Complete Docker containerization and push to DockerHub
-* Deploy on Azure or AWS
-* Add tests and monitoring tools
-* Convert Gradio app into Streamlit dashboard with business metrics
-
----
-
-## 📂 How to Run the Project
-
-```bash
-# Clone the repo
-git clone <repo-url>
-
-# Navigate to project folder
-cd customer-analytics
-
-# Create and activate a virtual environment
-python -m venv venv
-source venv/bin/activate  # On Linux/Mac
-venv\Scripts\activate     # On Windows
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Run the Gradio app
-python app.py
-
-# To build and run Docker container
-docker build -t customer-analytics-app .
-docker run -p 7860:7860 customer-analytics-app
-```
+* Finalize Docker build & push to Docker Hub
+* Deploy on Azure or AWS (currently pending)
+* Extend with Streamlit dashboard or BI integrations
+* Add monitoring (e.g., Prometheus, Grafana)
 
 ---
 
@@ -222,7 +163,10 @@ docker run -p 7860:7860 customer-analytics-app
 *Data Science Enthusiast*
 [GitHub](https://github.com/Aparna10010) | [LinkedIn](https://www.linkedin.com/in/apsh) | [Email](mailto:aparnasharma10010@gmail.com)
 
-```
+
+
+
+
 
 
 
