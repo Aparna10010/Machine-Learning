@@ -1,4 +1,4 @@
-````
+---
 # 🧠 Customer Analytics Project
 
 ## 📊 Introduction
