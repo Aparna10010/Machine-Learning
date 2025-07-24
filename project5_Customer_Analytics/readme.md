@@ -184,8 +184,12 @@ python app.py
 docker build -t customer-analytics-app .
 docker run -p 7860:7860 customer-analytics-app
 ```
-👤 Author
-**Aparna Sharma**
- Data Science Enthusiast
-GitHub | LinkedIn | Email
+## 👤 Author
+
+**Aparna Sharma**  
+*Data Science Enthusiast*  
+[GitHub](https://github.com/Aparna10010) <br>
+[LinkedIn](https://www.linkedin.com/in/apsh?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app) <br>
+[Email](aparnasharma10010@gmail.com)
+
 
