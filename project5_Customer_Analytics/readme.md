@@ -15,7 +15,6 @@ This end-to-end project showcases a complete machine learning workflow that help
 - Containerize the app using **Docker**
 - Integrate with **GitHub Actions** for CI/CD
 
----
 
 ## 🧪 Objective
 
