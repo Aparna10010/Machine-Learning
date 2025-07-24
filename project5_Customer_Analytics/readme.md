@@ -27,7 +27,7 @@ Build a production-ready pipeline for customer analytics that:
 4. Deploys the model via a user-friendly Gradio interface
 5. Supports containerization and version tracking
 
----
+
 
 ## 🚀 Project Pipeline
 
@@ -39,7 +39,7 @@ Build a production-ready pipeline for customer analytics that:
 * Feature scaling and label encoding
 * Data visualization for pattern discovery
 
----
+
 
 ### 2. **Baseline Model Training**
 
@@ -53,7 +53,6 @@ Build a production-ready pipeline for customer analytics that:
   * AUC-ROC Curve
 * Visualized predictions
 
----
 
 ### 3. **Handling Imbalance with SMOTE**
 
@@ -66,7 +65,7 @@ Build a production-ready pipeline for customer analytics that:
   * XGBoost
 * Compared model performance before and after balancing
 
----
+
 
 ### 4. **Neural Network Modeling**
 
@@ -74,7 +73,7 @@ Build a production-ready pipeline for customer analytics that:
 * Trained on SMOTE-balanced dataset
 * Evaluated and visualized model results
 
----
+
 
 ### 5. **Customer Segmentation**
 
@@ -85,7 +84,7 @@ Build a production-ready pipeline for customer analytics that:
 * Used K-Means to get optimal clusters for DBSCAN comparison
 * Saved models for reuse
 
----
+
 
 ### 6. **Model Logging with MLflow**
 
@@ -96,7 +95,7 @@ Build a production-ready pipeline for customer analytics that:
   * Tuned models
 * Tracked model metrics, parameters, and artifacts
 
----
+
 
 ### 7. **Hyperparameter Tuning**
 
@@ -109,7 +108,7 @@ Build a production-ready pipeline for customer analytics that:
   * FFNN (with Keras Tuner)
 * Logged and compared results in MLflow
 
----
+
 
 ### 8. **Gradio Web App**
 
@@ -118,7 +117,6 @@ Build a production-ready pipeline for customer analytics that:
 * Logged the app to MLflow with screenshots
 * Registered the final model with MLflow Model Registry
 
----
 
 ### 9. **Docker Containerization**
 
@@ -126,14 +124,14 @@ Build a production-ready pipeline for customer analytics that:
 * Created a container for deployment
 * (⚠️ Currently debugging a minor Docker run issue)
 
----
+
 
 ### 10. **CI/CD Integration**
 
 * Added GitHub Actions for CI/CD
 * (✔️ Workflow added, ⚠️ Docker action under debugging)
 
----
+
 
 ## 🧰 Tools & Technologies
 
@@ -147,7 +145,7 @@ Build a production-ready pipeline for customer analytics that:
 | Deployment     | Gradio, Docker                                 |
 | CI/CD          | GitHub Actions                                 |
 
----
+
 
 ## 📷 Screenshots
 
@@ -156,14 +154,14 @@ Build a production-ready pipeline for customer analytics that:
 * Dockerfile structure
 * GitHub Actions YAML config
 
----
+
 
 ## ⚠️ Known Issues
 
 * Dockerfile execution bug (under fix)
 * Azure deployment not complete due to lack of credit card for validation
 
----
+
 
 ## ✅ Future Enhancements
 
@@ -172,7 +170,7 @@ Build a production-ready pipeline for customer analytics that:
 * Extend with Streamlit dashboard or BI tools
 * Add monitoring tools (e.g., Prometheus, Grafana)
 
----
+
 
 ## 📂 How to Run the Project
 
@@ -199,7 +197,7 @@ docker build -t customer-analytics-app .
 docker run -p 7860:7860 customer-analytics-app
 ```
 
----
+
 
 ## 👤 Author
 
