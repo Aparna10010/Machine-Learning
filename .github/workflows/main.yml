@@ -1,0 +1,26 @@
+name: Customer Project Workflow
+
+on:
+  push:
+    paths:
+      - 'project5_Customer_Analytics/**'
+      - '.github/workflows/**'
+
+jobs:
+  run-ml:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: 3.10
+
+    - name: Install dependencies
+      run: pip install -r project5_Customer_Analytics/requirements.txt
+
+    - name: Run app
+      run: python project5_Customer_Analytics/app.py
