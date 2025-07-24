@@ -35,6 +35,15 @@ Build a production-ready pipeline for customer analytics that:
 - Exploratory Data Analysis (EDA)
 - Feature scaling and label encoding
 - Data visualization for pattern discovery
+- Class Imbalance Handling
+* Visualized churn distribution
+  ## 📸 Screenshots & Visuals
+
+### 📊 Class Imbalance Visualization
+![Churn Distribution](https://github.com/Aparna10010/Customer_Analytics_Project/blob/main/Screenshot%202025-07-19%20185325.png)
+
+> Churn: `1 = Yes`, `0 = No` — imbalance addressed using **SMOTE**
+
 
 ### 2. **Baseline Model Training**
 - Trained initial models:
@@ -44,6 +53,7 @@ Build a production-ready pipeline for customer analytics that:
   - Confusion Matrix
   - AUC-ROC Curve
 - Visualized predictions
+
 
 ### 3. **Handling Imbalance with SMOTE**
 - Applied **SMOTE** for oversampling minority class
@@ -87,6 +97,11 @@ Build a production-ready pipeline for customer analytics that:
 - Launched the app locally
 - Logged the app to MLflow with screenshots
 - Registered the final model with MLflow Model Registry
+- ### 🌐 Live Gradio UI
+▶ [Launch Gradio App Live](https://c07f471745468683be.gradio.live/)
+📸[Gradio UI ](https://github.com/Aparna10010/Machine-Learning/blob/main/project5_Customer_Analytics/Gradio%20UI.png)
+
+> Predict customer churn using an interactive, minimal UI.
 
 ### 9. **Docker Containerization**
 - Built a **Dockerfile** to package the app
@@ -116,7 +131,14 @@ Build a production-ready pipeline for customer analytics that:
 ## 📷 Screenshots
 
 - MLflow Experiments (metrics, models, parameters)
-- Gradio App UI
+  ![ML Flow UI/Run Page](https://github.com/Aparna10010/Machine-Learning/blob/main/project5_Customer_Analytics/ML-Flow.png)
+  ![Ml Flow Model Showcase](https://github.com/Aparna10010/Customer_Analytics_Project/blob/main/ML-Flow2.png)
+  ![Ml Flow Metrics demo](https://github.com/Aparna10010/Customer_Analytics_Project/blob/main/ML-Flow1.png)
+  ![Ml Flow Gradio App Artifact](https://github.com/Aparna10010/Customer_Analytics_Project/blob/main/ML-Flow5.png)
+
+
+
+
 - Dockerfile structure
 - GitHub Actions YAML config
 
